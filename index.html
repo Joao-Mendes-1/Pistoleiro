@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="tiro.css">
+	<title>Tiro Ao Alvo</title>
+</head>
+<body>
+	<footer>
+		<h1>Bem vindo ao Tiro ao Alvo</h1>
+	</footer>
+	<main>
+		<audio src="toyStory.wav" id="toyStory"></audio>
+		<audio src="trilha_sonora_velho_oeste.wav" id="trilhaSonora"></audio>
+		<audio src="dez_pontos.wav" id="dezPontos"></audio>
+		<audio src='som_tiro.wav' id="somTiro"></audio>
+		<audio src='piw_tiro.wav' id="somFacil"></audio>
+		
+		<div class="div-seletor-dificuldade">
+			<button id="hard" class="button">Hard</button>
+			<button id="medio" class="button">Medio</button>
+			<button id="easy" class="button">Easy</button>
+
+		</div>
+		<div class="numero-pontos">
+			<p>.Numero de Pontos.<a id="pontos" class="pontos"></a></p>
+				
+		</div>
+
+	</main>
+	<canvas width="1100" height="400" id="tela"></canvas>
+<script type="text/javascript" src="tiro.js"></script>
+</body>
+</html>
