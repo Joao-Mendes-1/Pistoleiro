@@ -13,9 +13,10 @@ let easy = false
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    document.getElementById('tela').style.background= 'none'
-    document.getElementById('tela').style.border= '2px dashed black'
-    document.getElementById('fundo_total').style.background = "url('fundo_hard.jpg')"
+    document.getElementById('tela').style.background= "url('fundo_canva_hard.jpg')"
+    document.getElementById('titulo').style.color= '#B8860B'
+    document.getElementById('tela').style.border= '2px dashed darkgoldenrod'
+    document.getElementById('fundo_total').style.background = "black"
     trilhaSonoraHard.loop=true
     trilhaSonoraHard.play()
    }
@@ -33,8 +34,8 @@ let easy = false
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    document.getElementById('fundo_total').style.background = "url('fundo_body_toyStory.jpg')"
-    document.getElementById('tela').style.background = "url('fundo_easy.jpg')"
+    document.getElementById('fundo_total').style.background = '#87CEEB'
+    document.getElementById('tela').style.background = "url('fundo_canva_easy.jpg')"
     trilhaSonoraEasy.loop=true
     trilhaSonoraEasy.play()
     easy = true
