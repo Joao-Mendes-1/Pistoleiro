@@ -8,8 +8,10 @@ let somTiro = document.getElementById('somTiro');
 let somTiroFacil = document.getElementById('somFacil')
 let easy = false
 //dificuldade
+let hard = false
    function dificuldadeHard(){
     setInterval(atualizaTela,700)
+    hard = true
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
@@ -34,8 +36,10 @@ let easy = false
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    document.getElementById('fundo_total').style.background = '#87CEEB'
-    document.getElementById('tela').style.background = "url('fundo_canva_easy.jpg')"
+    document.getElementById('fundo_total').style.background = "url('fundo_canva_easy.jpg')"
+    document.getElementById('tela').style.background = "none"
+    document.getElementById('tela').style.border = "5px solid royalblue"
+    //document.getElementById('tela').style.background = "url('fundo_canva_easy.jpg')"
     trilhaSonoraEasy.loop=true
     trilhaSonoraEasy.play()
     easy = true
@@ -112,7 +116,10 @@ let raio = 10
                 if (numeroDePontos >= 11) {
                     somDezPontos.play()
                     numeroDePontos = 0
-    
+                    /*if (hard == true) {
+                        falta escrever ess código, sistema de recompensa caso chegue a 10 pontos no modo hard
+                        document.getElementById('tela').style.background= "none"
+                    }*/
                 }
             }
     }
