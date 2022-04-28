@@ -7,13 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="tiro.css">
 	<title>Tiro Ao Alvo</title>
 </head>
-<body>
+<body id="fundo_total">
 	<footer>
 		<h1>Bem vindo ao Tiro ao Alvo</h1>
 	</footer>
 	<main>
-		<audio src="toyStory.wav" id="toyStory"></audio>
-		<audio src="trilha_sonora_velho_oeste.wav" id="trilhaSonora"></audio>
+		<audio src="trilha_sonora_medio.wav" id="trilhaSonoraMedio"></audio>
+		<audio src="trilha_sonora_easy.wav" id="trilhaSonoraEasy"></audio>
+		<audio src="trilha_sonora_hard.wav" id="trilhaSonoraHard"></audio>
 		<audio src="dez_pontos.wav" id="dezPontos"></audio>
 		<audio src='som_tiro.wav' id="somTiro"></audio>
 		<audio src='piw_tiro.wav' id="somFacil"></audio>
@@ -28,9 +29,10 @@
 			<p>.Numero de Pontos.<a id="pontos" class="pontos"></a></p>
 				
 		</div>
-
+		<canvas width="1100" height="400" id="tela"></canvas>
 	</main>
-	<canvas width="1100" height="400" id="tela"></canvas>
+
+	
 <script type="text/javascript" src="tiro.js"></script>
 </body>
 </html>

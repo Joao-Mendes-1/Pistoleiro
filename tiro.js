@@ -1,7 +1,8 @@
 
 //som
-let trilhaSonoraToyStory = document.getElementById('toyStory')
-let trilhaSonora = document.getElementById('trilhaSonora')
+let trilhaSonoraMedio = document.getElementById('trilhaSonoraMedio')
+let trilhaSonoraEasy = document.getElementById('trilhaSonoraEasy')
+let trilhaSonoraHard = document.getElementById('trilhaSonoraHard')
 let somDezPontos = document.getElementById('dezPontos')
 let somTiro = document.getElementById('somTiro');
 let somTiroFacil = document.getElementById('somFacil')
@@ -12,14 +13,19 @@ let easy = false
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    trilhaSonora.play()
+    document.getElementById('tela').style.background= 'none'
+    document.getElementById('tela').style.border= '2px dashed black'
+    document.getElementById('fundo_total').style.background = "url('fundo_hard.jpg')"
+    trilhaSonoraHard.loop=true
+    trilhaSonoraHard.play()
    }
    function dificuldadeMedio(){
     setInterval(atualizaTela,1000)
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    trilhaSonora.play()
+    trilhaSonoraMedio.loop=true
+    trilhaSonoraMedio.play()
                 
    }
    function dificuldadeEasy(){
@@ -27,7 +33,10 @@ let easy = false
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
-    trilhaSonoraToyStory.play()
+    document.getElementById('fundo_total').style.background = "url('fundo_body_toyStory.jpg')"
+    document.getElementById('tela').style.background = "url('fundo_easy.jpg')"
+    trilhaSonoraEasy.loop=true
+    trilhaSonoraEasy.play()
     easy = true
    }
 
@@ -43,9 +52,9 @@ const tela = document.querySelector('canvas');
 const pincel = tela.getContext('2d');
 
 pincel.fillRect(0, 0, 1100, 400);
-	let xAleatorio = sorteiaPosicao(1100)
-    let yAleatorio = sorteiaPosicao(400)
-    let raio = 10
+let xAleatorio = sorteiaPosicao(1100)
+let yAleatorio = sorteiaPosicao(400)
+let raio = 10
 
     function desenhaCirculo(x, y, raio,cor) {
 
@@ -78,11 +87,14 @@ pincel.fillRect(0, 0, 1100, 400);
     function dispara(evento) {
         var x = evento.pageX - tela.offsetLeft
         var y = evento.pageY - tela.offsetTop
-        //sons
+        //sons de tiro
         if (easy == true) {
+            somTiroFacil.volume = 0.4
             somTiroFacil.play()
+
         }else{
             somTiro.play()
+            somTiro.volume = 0.4
         }
 
         //lógica do dispara
@@ -93,7 +105,7 @@ pincel.fillRect(0, 0, 1100, 400);
                 //adicionando numero de pontos
                 contarPontos(numeroDePontos)
                 numeroDePontos++
-                //mundar o fundo do placar
+                //mudar o fundo do placar
                 document.getElementById('pontos').style.background = 'black'
                 //chegando a 10 pontos
                 if (numeroDePontos >= 11) {
