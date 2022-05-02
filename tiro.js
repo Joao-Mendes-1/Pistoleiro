@@ -1,3 +1,9 @@
+//funções
+function desativarBotoes() {
+    document.getElementById('hard').style.display = 'none'
+    document.getElementById('medio').style.display = 'none'
+    document.getElementById('easy').style.display = 'none'
+}
 
 //som
 let trilhaSonoraMedio = document.getElementById('trilhaSonoraMedio')
@@ -8,41 +14,46 @@ let somTiro = document.getElementById('somTiro');
 let somTiroFacil = document.getElementById('somFacil')
 let easy = false
 //dificuldade
+/* fase de teste do modo hell
+let hell = false
+    function dificuldadeHell(repetidorDeAlvo){
+        document.getElementById('titulo').style.color= 'black'
+        alert("Você chegou no nivel HELL") 
+        document.getElementById('tela').style.background= "url('fundo_canva_hell.jpg')"               
+        clearInterval(velocidadeHard)
+        //setInterval(atualizaTela,850)
+
+    }*/
 let hard = false
    function dificuldadeHard(){
-    setInterval(atualizaTela,700)
-    hard = true
-    document.getElementById('hard').style.display = 'none'
-    document.getElementById('medio').style.display = 'none'
-    document.getElementById('easy').style.display = 'none'
-    document.getElementById('tela').style.background= "url('fundo_canva_hard.jpg')"
-    document.getElementById('titulo').style.color= '#B8860B'
-    document.getElementById('tela').style.border= '2px dashed darkgoldenrod'
-    document.getElementById('fundo_total').style.background = "black"
-    trilhaSonoraHard.loop=true
-    trilhaSonoraHard.play()
+        hard = true
+        let repetidorDeAlvo = setInterval(atualizaTela,800)
+        desativarBotoes() 
+        document.getElementById('tela').style.background= "url('fundo_canva_hard.jpg')"
+        document.getElementById('titulo').style.color= 'black'
+        /*document.getElementById('numeroDePontos').style.color = 'gold'*/
+        //document.getElementById('numeroDePontos').style.background = 'white'
+        //document.getElementById('tela').style.border= '2px solid darkred'
+        document.getElementById('fundo_total').style.background = "darkgoldenrod"
+        trilhaSonoraHard.loop=true
+        trilhaSonoraHard.play()
    }
    function dificuldadeMedio(){
-    setInterval(atualizaTela,1000)
-    document.getElementById('hard').style.display = 'none'
-    document.getElementById('medio').style.display = 'none'
-    document.getElementById('easy').style.display = 'none'
-    trilhaSonoraMedio.loop=true
-    trilhaSonoraMedio.play()
+        let repetidorDeAlvo = setInterval(atualizaTela,1000)
+        desativarBotoes() 
+        trilhaSonoraMedio.loop=true
+        trilhaSonoraMedio.play()
                 
    }
    function dificuldadeEasy(){
-    setInterval(atualizaTela,1200)
-    document.getElementById('hard').style.display = 'none'
-    document.getElementById('medio').style.display = 'none'
-    document.getElementById('easy').style.display = 'none'
-    document.getElementById('fundo_total').style.background = "url('fundo_canva_easy.jpg')"
-    document.getElementById('tela').style.background = "none"
-    document.getElementById('tela').style.border = "5px solid royalblue"
-    //document.getElementById('tela').style.background = "url('fundo_canva_easy.jpg')"
-    trilhaSonoraEasy.loop=true
-    trilhaSonoraEasy.play()
-    easy = true
+        let repetidorDeAlvo = setInterval(atualizaTela,1200)
+        desativarBotoes()
+        document.getElementById('fundo_total').style.background = "url('fundo_canva_easy.jpg')"
+        document.getElementById('tela').style.background = "none"
+        document.getElementById('tela').style.border = "5px solid royalblue"
+        trilhaSonoraEasy.loop=true
+        trilhaSonoraEasy.play()
+        easy = true
    }
 
 //contador de pontos
@@ -117,8 +128,7 @@ let raio = 10
                     somDezPontos.play()
                     numeroDePontos = 0
                     /*if (hard == true) {
-                        falta escrever ess código, sistema de recompensa caso chegue a 10 pontos no modo hard
-                        document.getElementById('tela').style.background= "none"
+                        dificuldadeHell(repetidorDeAlvo)
                     }*/
                 }
             }
