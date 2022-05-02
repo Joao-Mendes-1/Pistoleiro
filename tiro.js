@@ -3,6 +3,7 @@ function desativarBotoes() {
     document.getElementById('hard').style.display = 'none'
     document.getElementById('medio').style.display = 'none'
     document.getElementById('easy').style.display = 'none'
+
 }
 
 //som
@@ -13,17 +14,9 @@ let somDezPontos = document.getElementById('dezPontos')
 let somTiro = document.getElementById('somTiro');
 let somTiroFacil = document.getElementById('somFacil')
 let easy = false
-//dificuldade
-/* fase de teste do modo hell
-let hell = false
-    function dificuldadeHell(repetidorDeAlvo){
-        document.getElementById('titulo').style.color= 'black'
-        alert("Você chegou no nivel HELL") 
-        document.getElementById('tela').style.background= "url('fundo_canva_hell.jpg')"               
-        clearInterval(velocidadeHard)
-        //setInterval(atualizaTela,850)
 
-    }*/
+//dificuldade
+let hell = false
 let hard = false
    function dificuldadeHard(){
         hard = true
@@ -31,9 +24,6 @@ let hard = false
         desativarBotoes() 
         document.getElementById('tela').style.background= "url('fundo_canva_hard.jpg')"
         document.getElementById('titulo').style.color= 'black'
-        /*document.getElementById('numeroDePontos').style.color = 'gold'*/
-        //document.getElementById('numeroDePontos').style.background = 'white'
-        //document.getElementById('tela').style.border= '2px solid darkred'
         document.getElementById('fundo_total').style.background = "darkgoldenrod"
         trilhaSonoraHard.loop=true
         trilhaSonoraHard.play()
@@ -126,10 +116,10 @@ let raio = 10
                 //chegando a 10 pontos
                 if (numeroDePontos >= 11) {
                     somDezPontos.play()
-                    numeroDePontos = 0
-                    /*if (hard == true) {
-                        dificuldadeHell(repetidorDeAlvo)
-                    }*/
+                    numeroDePontos = 1
+                    hell = true
+                }else if (hell == true) {
+                    document.getElementById('hell').style.display = "inline-block"
                 }
             }
     }
