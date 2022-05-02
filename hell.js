@@ -47,7 +47,6 @@ let yAleatorio = sorteiaPosicao(400)
 let raio = 10
 
 function desenhaCirculo(x, y, raio,cor) {
-
     pincel.fillStyle = cor;
     pincel.beginPath();
     pincel.arc(x, y, raio, 0, 2 * Math.PI);
@@ -87,7 +86,7 @@ function dispara(evento) {
         somTiro.volume = 0.4
     }
 
-        //lógica do dispara
+//lógica do dispara
 if((x > xAleatorio - raio)
     && (x < xAleatorio + raio)
     && (y > yAleatorio - raio)
