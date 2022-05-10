@@ -40,8 +40,54 @@ h1 {
 	color: darkred;
 }
 
+
+
 canvas {
 	margin-top: 30px ;
 	text-align: center;
 	border-radius: 10px;
+	cursor: url(mira.cur),auto;	
+}
+
+/*rodape*/
+
+footer {
+	margin: 50px;
+	width: 2000;
+	padding: 20px;
+	/*margin-left: -105px;
+	margin-right: -104px;*/
+	background-color: dimgrey;
+}
+.oferecimentos{
+	color: whitesmoke;
+	padding: 20px;
+	font-size: 13px;
+	text-align: center;
+
+}
+.logo{
+	text-transform: uppercase;
+}
+
+.contatos a {
+	text-decoration: none;
+}
+.copyright {
+	color: whitesmoke;
+	padding: 20px;
+	font-size: 13px;
+	text-align: center;
+
+}
+.contatos {
+	text-align: center;
+	font-size: 13px;
+	color: ghostwhite;
+}
+.contatos a:hover{
+	text-decoration: underline;
+}
+footer,.contatos.copyright{
+	display: none;
 }

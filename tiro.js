@@ -23,12 +23,15 @@ function dificuldadeHard(){
     desativarBotoes() 
     document.getElementById('tela').style.background= "url('fundo_canva_hard.jpg')"
     document.getElementById('titulo').style.color= 'black'
-    document.getElementById('fundo_total').style.background = "darkgoldenrod"
+    document.getElementById('fundo_total').style.background = "#fefacb"
+    trilhaSonoraHard.volume = 0.7
     trilhaSonoraHard.loop=true
     trilhaSonoraHard.play()
+
 }
 
 function dificuldadeMedio(){
+    document.getElementById('tela').style.background= "url('fundo_canva_medio.jpg')"
     let repetidorDeAlvo = setInterval(atualizaTela,1000)
     desativarBotoes() 
     trilhaSonoraMedio.loop=true
@@ -42,6 +45,7 @@ function dificuldadeEasy(){
     document.getElementById('fundo_total').style.background = "url('fundo_canva_easy.jpg')"
     document.getElementById('tela').style.background = "none"
     document.getElementById('tela').style.border = "5px solid royalblue"
+    trilhaSonoraEasy.volume = 0.5
     trilhaSonoraEasy.loop=true
     trilhaSonoraEasy.play()
     easy = true

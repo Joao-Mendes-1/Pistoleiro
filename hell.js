@@ -3,21 +3,23 @@
 let musicaVitoria = document.getElementById('musicaVitoria')
 let trilhaSonoraHell = document.getElementById('trilhaSonoraHell')
 let somTiro = document.getElementById('somTiro');
-let easy = false
 
 function tocarMusica(){
     trilhaSonoraHell.loop=true
     trilhaSonoraHell.play()    
 }
+
 //hell
     
 tocarMusica()
 document.getElementById('tela').style.background= "url('fundo_canva_hell.jpg')"               
-let myInterval =setInterval(atualizaTela,700)    
+let myInterval =setInterval(atualizaTela,1650)    
 
 //quando chegar a 10 pontos no modo hell vitoria
 function vitoria() {
+    document.getElementById('fundo_total').style.background= "dimgrey"
     document.getElementById("titulo").innerHTML= "YOU WIN"
+    document.getElementById("rodape").style.display= "block"
     document.getElementById("titulo").style.color= "#F5DEB3"
     document.getElementById("numeroDePontos").style.display = "none"
     somTiro.muted= true
@@ -78,10 +80,7 @@ function dispara(evento) {
     var x = evento.pageX - tela.offsetLeft
     var y = evento.pageY - tela.offsetTop
     //sons de tiro
-    if (easy == true) {
-    somTiroFacil.volume = 0.4
-    somTiroFacil.play()
-    }else{
+    if (true) {
         somTiro.play()
         somTiro.volume = 0.4
     }
