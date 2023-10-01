@@ -12,8 +12,8 @@ function tocarMusica(){
 //hell
     
 tocarMusica()
-document.getElementById('tela').style.background= "url('fundo_canva_hell.jpg')"               
-let myInterval =setInterval(atualizaTela,1650)    
+document.getElementById('tela').style.background= "url('../../style/imagens/fundo_canva_hell.jpg')"               
+let myInterval =setInterval(atualizaTela,700)    
 
 //quando chegar a 10 pontos no modo hell vitoria
 function vitoria() {
@@ -27,7 +27,7 @@ function vitoria() {
     limpaTela()
     trilhaSonoraHell.pause()
     musicaVitoria.play()
-    document.getElementById('tela').style.background= "url('fundo_vitoria.jpg')"
+    document.getElementById('tela').style.background= "url('../../style/imagens/fundo_vitoria.jpg')"
 }
 
 
@@ -74,7 +74,7 @@ function atualizaTela() {
     xAleatorio = sorteiaPosicao(1100)
     yAleatorio = sorteiaPosicao(400)
     desenhaAlvo(xAleatorio,yAleatorio,raio)
- }
+}
 
 function dispara(evento) {
     var x = evento.pageX - tela.offsetLeft
