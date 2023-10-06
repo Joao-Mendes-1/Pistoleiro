@@ -21,7 +21,7 @@ function dificuldadeHard(){
     hard = true
     let repetidorDeAlvo = setInterval(atualizaTela,800)
     desativarBotoes() 
-    document.getElementById('tela').style.background= "url('../style/imagens/fundo_canva_hard.jpg')"
+    document.getElementById('tela').style.background= "url('style/imagens/fundo_canva_hard.jpg')"
     document.getElementById('titulo').style.color= 'black'
     document.getElementById('fundo_total').style.background = "#fefacb"
     trilhaSonoraHard.volume = 0.7
@@ -31,7 +31,7 @@ function dificuldadeHard(){
 }
 
 function dificuldadeMedio(){
-    document.getElementById('tela').style.background= "url('../style/imagens/fundo_canva_medio.jpg')"
+    document.getElementById('tela').style.background= "url('style/imagens/fundo_canva_medio.jpg')"
     let repetidorDeAlvo = setInterval(atualizaTela,1000)
     desativarBotoes() 
     trilhaSonoraMedio.loop=true
@@ -41,7 +41,7 @@ function dificuldadeMedio(){
 function dificuldadeEasy(){
     let repetidorDeAlvo = setInterval(atualizaTela,1200)
     desativarBotoes()
-    document.getElementById('fundo_total').style.background = "url('../style/imagens/fundo_canva_easy.jpg')"
+    document.getElementById('fundo_total').style.background = "url('style/imagens/fundo_canva_easy.jpg')"
     document.getElementById('tela').style.background = "none"
     document.getElementById('tela').style.border = "5px solid royalblue"
     trilhaSonoraEasy.volume = 0.5

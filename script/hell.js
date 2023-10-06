@@ -12,7 +12,7 @@ function tocarMusica(){
 //hell
     
 tocarMusica()
-document.getElementById('tela').style.background= "url('../../style/imagens/fundo_canva_hell.jpg')"               
+document.getElementById('tela').style.background= "url('../style/imagens/fundo_canva_hell.jpg')"               
 let myInterval =setInterval(atualizaTela,700)    
 
 //quando chegar a 10 pontos no modo hell vitoria
@@ -27,7 +27,7 @@ function vitoria() {
     limpaTela()
     trilhaSonoraHell.pause()
     musicaVitoria.play()
-    document.getElementById('tela').style.background= "url('../../style/imagens/fundo_vitoria.jpg')"
+    document.getElementById('tela').style.background= "url('../style/imagens/fundo_vitoria.jpg')"
 }
 
 
